@@ -3,3 +3,5 @@ arm7/debug/*
 arm7/release/*
 arm9/debug/*
 arm9/release/*
+lib/libdswifi7d.a
+lib/libdswifi9d.a
