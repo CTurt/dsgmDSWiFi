@@ -40,9 +40,9 @@ ASFLAGS	:=	-g $(ARCH)
 LDFLAGS	=	-specs=ds_arm9.specs -g $(ARCH) -Wl,-Map,$(notdir $*.map)
 
 ifneq ($(BUILD),debug)
-export ARM9BIN	:=	$(TOPDIR)/lib/libdsgmdswifi9.a
+export ARM9BIN	:=	$(TOPDIR)/release/lib/libdsgmdswifi9.a
 else
-export ARM9BIN	:=	$(TOPDIR)/lib/libdsgmdswifi9d.a
+export ARM9BIN	:=	$(TOPDIR)/release/lib/libdsgmdswifi9d.a
 CFLAGS	+=	-DSGIP_DEBUG
 endif
 
