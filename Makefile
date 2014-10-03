@@ -12,7 +12,7 @@ VERSION	:=	$(DSWIFI_MAJOR).$(DSWIFI_MINOR).$(DSWIFI_REVISION)
  
 .PHONY: release debug clean all
 
-all: include/dswifi_version.h release debug 
+all: include/dswifi_version.h release
 
 include/dswifi_version.h : Makefile
 	@echo "#ifndef _dswifi_version_h_" > $@
@@ -31,13 +31,11 @@ include/dswifi_version.h : Makefile
 release: lib
 #-------------------------------------------------------------------------------
 	$(MAKE) -C arm9 BUILD=release
-	$(MAKE) -C arm7 BUILD=release
  
 #-------------------------------------------------------------------------------
 debug: lib
 #-------------------------------------------------------------------------------
 	$(MAKE) -C arm9 BUILD=debug
-	$(MAKE) -C arm7 BUILD=debug
 
 #-------------------------------------------------------------------------------
 lib:
